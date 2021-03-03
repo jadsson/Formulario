@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Form</title>
+</head>
+<body>
+<!-- div class='container'; vai cuidar de todos os outros divs -->
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Formulário The Witcher</h1>
+            <p id="description" class="description text-center">Preencha e deixe sua opinião sobre esta saga.</p>
+        </header>
+<!-- Todo o formulário está aninhado nesta tag -->
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Seu nome</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Insira seu nome" required/>
+            </div>
+<!-- Inserir email com validação de escrita -->
+            <div class="form-group">
+                <label id="email-label" for="email">Email principal</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Insira seu email" required/>
+            </div>
+<!-- Idade -->
+            <div class="form-group">
+                <label id="number-label" for="age">Idade</label>
+                <input type="number" name="age" id="number" class="form-control" placeholder="Insira sua idade" min="10" max="99" required/>
+            </div>
+            
+<!-- Grupo de seleção de opções -->
+            <div class="form-group">
+                <p>Qual das opções melhor descreve sua gameplay?</p>
+                <select name="dropdown" id="dropdown">
+                    <option value="agressivo">Agressivo</option>
+                    <option value="medo">Medroso</option>
+                    <option value="catador">Zé-loot</option>
+                    <option value="meio-termo">Moderado</option>
+                    <option value="sem-nocao">Perdido</option>
+                    <option value="bobo">Sem noção</option>
+                </select>
+            </div>
+<!-- radio botoes -->
+            <div class="radio-group">
+                <p>Qual seu personagem favorito em The Witcher?</p><hr>
+                <label><input type="radio" name="personagem" value="geralt" class="input-radio-names" checked>Geralt</label>
+                <label><input type="radio" name="personagem" value="cirila" class="input-radio-names">Cirila</label>
+                <label><input type="radio" name="personagem" value="tris" class="input-radio-names">Tris</label>
+                <label><input type="radio" name="personagem" value="yennefer" class="input-radio-names">Yennefer</label>
+                <label><input type="radio" name="personagem" value="jaskier" class="input-radio-names">Jaskier</label>
+                <label><input type="radio" name="personagem" value="keira" class="input-radio-names">Keira</label>
+                <label><input type="radio" name="personagem" value="priscilla" class="input-radio-names">Priscilla</label>
+            </div>
+            
+<!-- checkbox -->
+            <div class="checkbox-group">
+                <p>Quais regiões você mais visitou no jogo?</p><hr>
+                <label><input type="checkbox" name="mapa" value="primeiro" class="input-checkbox" checked>Kaer Morhen</label>
+                <label><input type="checkbox" name="mapa" value="segundo" class="input-checkbox">Pomar Branco</label>
+                <label><input type="checkbox" name="mapa" value="terceiro" class="input-checkbox">Velen</label>
+                <label><input type="checkbox" name="mapa" value="quarto" class="input-checkbox">Novigrad</label>
+                <label><input type="checkbox" name="mapa" value="quinto" class="input-checkbox">Skellig</label>
+            </div>
+
+<!-- radio buttons -->
+            <!-- label + input permite que a opção seja selecionada ao clicar no nome -->
+            <!-- para que apenas uma opção possa ser selecionada precisamos do atributo name em todos com mesmo valor -->
+            <div class="radio-group">
+                <p>Você recomendaria esta saga pra um amigo?</p><hr>
+                <label><input type="radio" name="recomendacao" value="sim" class="input-radio" checked>Sim</label>
+                <label><input type="radio" name="recomendacao" value="claro" class="input-radio">Claro</label>
+                <label><input type="radio" name="recomendacao" value="obvio" class="input-radio">Obviamente</label>
+                <label><input type="radio" name="recomendacao" value="duvida-nao" class="input-radio">Sem dúvidas</label>
+                <label><input type="radio" name="recomendacao" value="feito" class="input-radio">Já recomendei</label>
+            </div>
+
+<!-- área de texto -->
+            <textarea name="area-texto" id="area-texto" cols="30" rows="10" placeholder="Segestões:"></textarea>
+
+<!-- botao submit -->
+            <button type="submit" id="submit" value="enviar">Enviar</button>
+        </form>
+        </div>
+    </div>
+
+</body>
+</html>
